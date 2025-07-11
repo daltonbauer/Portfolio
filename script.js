@@ -46,34 +46,6 @@ const loadPortfolio = async () => {
     } catch (error) {
       console.error('Error loading gallery images:', error);
     }
-  };
-
-  // In a real implementation, you would scan the images/portfolio directory
-  // and create gallery items for each image found
-
-  // Example of how this would work with real files:
-  /*
-  // This would be server-side code or use the File System API if available
-  const portfolioImages = getImagesFromDirectory('images/portfolio/');
-  
-  portfolioImages.forEach((image, index) => {
-    const galleryItem = document.createElement("div");
-    
-    // Assign modular sizing classes based on image properties or pattern
-    if (image.width > image.height * 1.5) {
-      galleryItem.className = "gallery-item wide reveal";
-    } else if (image.height > image.width * 1.5) {
-      galleryItem.className = "gallery-item tall reveal";
-    } else if (index % 7 === 0) {
-      galleryItem.className = "gallery-item large reveal";
-    } else {
-      galleryItem.className = "gallery-item reveal";
-    }
-    
-    galleryItem.innerHTML = `<img src="${image.path}" alt="Gallery item">`;
-    galleryGrid.appendChild(galleryItem);
-  });
-  */
 }
 
 // Load portfolio when DOM is fully loaded
