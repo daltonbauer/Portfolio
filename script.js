@@ -40,35 +40,20 @@ const loadPortfolio = async () => {
   // Sample portfolio items - replace these with your actual work
   const portfolioItems = [
     {
-      image: "images/portfolio/project1.jpg",
+      image: "images/portfolio/1.jpg",
       title: "Brand Identity",
       description: "Corporate rebrand for tech startup",
     },
     {
-      image: "images/portfolio/project2.jpg",
+      image: "images/portfolio/2.jpg",
       title: "Digital Campaign",
       description: "Social media assets for product launch",
     },
     {
-      image: "images/portfolio/project3.jpg",
+      image: "images/portfolio/3.webp",
       title: "Print Design",
       description: "Magazine layout and editorial design",
-    },
-    {
-      image: "images/portfolio/project4.jpg",
-      title: "Packaging",
-      description: "Product packaging for cosmetics line",
-    },
-    {
-      image: "images/portfolio/project5.jpg",
-      title: "Web Design",
-      description: "E-commerce website UI/UX design",
-    },
-    {
-      image: "images/portfolio/project6.jpg",
-      title: "Motion Graphics",
-      description: "Animated promotional video",
-    },
+    }
   ]
 
   // Create portfolio items
@@ -80,7 +65,7 @@ const loadPortfolio = async () => {
     portfolioItem.className = "portfolio-item reveal"
 
     portfolioItem.innerHTML = `
-      <img src="${placeholderUrl}" alt="${item.title}">
+      <img src="${item.image}" alt="${item.title}">
       <div class="portfolio-item-overlay">
         <h3 class="portfolio-item-title">${item.title}</h3>
         <p>${item.description}</p>
