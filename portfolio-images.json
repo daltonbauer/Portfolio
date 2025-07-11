@@ -1,0 +1,17 @@
+{
+    "images": [
+      {"path": "images/portfolio/1.jpeg", "size": "wide"},
+      {"path": "images/portfolio/2.jpeg", "size": "wide"},
+      {"path": "images/portfolio/3.jpeg", "size": "tall"},
+      {"path": "images/portfolio/4.jpeg", "size": "wide"},
+      {"path": "images/portfolio/5.jpeg", "size": "tall"},
+      {"path": "images/portfolio/6.jpeg", "size": "wide"},
+      {"path": "images/portfolio/7.jpeg", "size": "tall"},
+      {"path": "images/portfolio/8.jpeg", "size": "tall"},
+      {"path": "images/portfolio/9.jpeg", "size": "tall"},
+      {"path": "images/portfolio/10.jpeg", "size": "wide"},
+      {"path": "images/portfolio/11.jpeg", "size": "standard"},
+      {"path": "images/portfolio/12.jpeg", "size": "tall"},
+      {"path": "images/portfolio/13.jpeg", "size": "tall"}
+    ]
+  }

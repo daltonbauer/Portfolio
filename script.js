@@ -29,51 +29,68 @@ const revealElements = () => {
 window.addEventListener("scroll", revealElements)
 window.addEventListener("load", revealElements)
 
-// Dynamically load portfolio items from the images/portfolio directory
+// Dynamically load gallery items from the images/portfolio directory
 const loadPortfolio = async () => {
-  const portfolioGrid = document.getElementById("portfolio-grid")
+  const galleryGrid = document.getElementById("gallery-grid")
 
-  // This is where we would normally fetch a list of images from the server
-  // Since we're using GitHub Pages, we'll simulate this with a predefined list
-  // In reality, you would just add images to your repository and they would appear
+  // For GitHub Pages, we'll use placeholder images until real ones are added
+  // In a real scenario, you would just add images to your repository folder
 
-  // Sample portfolio items - replace these with your actual work
-  const portfolioItems = [
-    {
-      image: "images/portfolio/1.jpg",
-      title: "Brand Identity",
-      description: "Corporate rebrand for tech startup",
-    },
-    {
-      image: "images/portfolio/2.jpg",
-      title: "Digital Campaign",
-      description: "Social media assets for product launch",
-    },
-    {
-      image: "images/portfolio/3.webp",
-      title: "Print Design",
-      description: "Magazine layout and editorial design",
+  // Create an array of 12 placeholder images
+  const placeholderCount = 12
+  const placeholders = []
+
+  for (let i = 1; i <= placeholderCount; i++) {
+    placeholders.push(`https://source.unsplash.com/random/600x${400 + i * 10}?design,graphic${i}`)
+  }
+
+  // Create gallery items with modular sizing
+  const portfolioImages = getImagesFromDirectory('images/portfolio/');
+  
+  portfolioImages.forEach((image, index) => {
+    const galleryItem = document.createElement("div");
+    
+    // Assign modular sizing classes based on image properties or pattern
+    if (image.width > image.height * 1.5) {
+      galleryItem.className = "gallery-item wide reveal";
+    } else if (image.height > image.width * 1.5) {
+      galleryItem.className = "gallery-item tall reveal";
+    } else if (index % 7 === 0) {
+      galleryItem.className = "gallery-item large reveal";
+    } else {
+      galleryItem.className = "gallery-item reveal";
     }
-  ]
+    
+    galleryItem.innerHTML = `<img src="${image.path}" alt="Gallery item">`;
+    galleryGrid.appendChild(galleryItem);
+  });
 
-  // Create portfolio items
-  portfolioItems.forEach((item) => {
-    // For GitHub Pages, we'll use placeholder images until real ones are added
-    const placeholderUrl = `https://source.unsplash.com/random/600x400?design,${item.title.toLowerCase().replace(" ", "")}`
+  // In a real implementation, you would scan the images/portfolio directory
+  // and create gallery items for each image found
 
-    const portfolioItem = document.createElement("div")
-    portfolioItem.className = "portfolio-item reveal"
-
-    portfolioItem.innerHTML = `
-      <img src="${item.image}" alt="${item.title}">
-      <div class="portfolio-item-overlay">
-        <h3 class="portfolio-item-title">${item.title}</h3>
-        <p>${item.description}</p>
-      </div>
-    `
-
-    portfolioGrid.appendChild(portfolioItem)
-  })
+  // Example of how this would work with real files:
+  /*
+  // This would be server-side code or use the File System API if available
+  const portfolioImages = getImagesFromDirectory('images/portfolio/');
+  
+  portfolioImages.forEach((image, index) => {
+    const galleryItem = document.createElement("div");
+    
+    // Assign modular sizing classes based on image properties or pattern
+    if (image.width > image.height * 1.5) {
+      galleryItem.className = "gallery-item wide reveal";
+    } else if (image.height > image.width * 1.5) {
+      galleryItem.className = "gallery-item tall reveal";
+    } else if (index % 7 === 0) {
+      galleryItem.className = "gallery-item large reveal";
+    } else {
+      galleryItem.className = "gallery-item reveal";
+    }
+    
+    galleryItem.innerHTML = `<img src="${image.path}" alt="Gallery item">`;
+    galleryGrid.appendChild(galleryItem);
+  });
+  */
 }
 
 // Load portfolio when DOM is fully loaded
