@@ -4,75 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dalton Bauer | Graphic Designer</title>
-  <!-- Make sure this path is correct -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
+
   <header>
+    <div id="hero-background"></div>
     <nav>
       <div class="logo">DB</div>
       <ul class="nav-links">
         <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="hero">
       <h1 class="reveal-text">Dalton Bauer</h1>
-      <h2 class="reveal-text delay-1">Graphic Design | Community Relations</h2>
+      <h2 class="reveal-text delay-1">Visual & Digital Designer</h2>
       <div class="scroll-indicator">
-        <span>Scroll to explore</span>
+        <span>Explore My Work</span>
         <div class="arrow"></div>
       </div>
     </div>
   </header>
 
-  <section id="work" class="portfolio">
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery-grid" id="gallery-grid">
-      <!-- Gallery items will be dynamically loaded here -->
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="about-content">
-      <div class="about-text">
-        <h2 class="section-title">About Me</h2>
-        <p>I'm Dalton Bauer, a passionate graphic designer focused on creating impactful visual experiences. My approach combines strategic thinking with creative execution to deliver designs that resonate with audiences and achieve business objectives.</p>
-        <p>With expertise in brand identity, digital design, and print media, I bring a versatile skill set to every project. I believe in the power of thoughtful design to transform ideas into memorable visual stories.</p>
+  <main>
+    <section id="work" class="portfolio">
+      <h2 class="section-title">Selected Works</h2>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Gallery items will be dynamically loaded here -->
       </div>
-      <div class="companies">
-        <h3>Past Collaborations</h3>
-        <ul class="company-list">
-          <li class="company-item">Adobe</li>
-          <li class="company-item">Figma</li>
-          <li class="company-item">Dribbble</li>
-          <li class="company-item">Behance</li>
-          <li class="company-item">Creative Market</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <p>Interested in working together? Feel free to reach out.</p>
-    <a href="mailto:hello@daltonbauer.com" class="contact-button">hello@daltonbauer.com</a>
-    <div class="social-links">
-      <a href="#" class="social-link">Instagram</a>
-      <a href="#" class="social-link">LinkedIn</a>
-      <a href="#" class="social-link">Behance</a>
-    </div>
-  </section>
+    <section id="experience" class="experience">
+      <h2 class="section-title">Career Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <img src="/placeholder.svg?height=40&width=40" alt="Company A Logo" class="company-logo">
+              <div>
+                <h3>Lead Designer at Tech Innovators Inc.</h3>
+                <span>2021 - Present</span>
+              </div>
+            </div>
+            <p>Leading the design team in creating next-generation user interfaces and brand experiences.</p>
+            <ul>
+              <li>Developed and maintained a comprehensive design system, increasing team efficiency by 30%.</li>
+              <li>Directed the visual design for three major product launches, resulting in a 25% increase in user engagement.</li>
+              <li>Mentored junior designers, fostering a culture of creativity and continuous improvement.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <img src="/placeholder.svg?height=40&width=40" alt="Company C Logo" class="company-logo">
+              <div>
+                <h3>Senior UI/UX Designer at Creative Solutions</h3>
+                <span>2018 - 2021</span>
+              </div>
+            </div>
+            <p>Focused on crafting intuitive and visually appealing user experiences for web and mobile applications.</p>
+            <ul>
+              <li>Redesigned the flagship mobile app, leading to a 4.8-star rating on the App Store.</li>
+              <li>Conducted user research and usability testing to inform design decisions.</li>
+              <li>Collaborated with product managers and developers to translate concepts into functional designs.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <img src="/placeholder.svg?height=40&width=40" alt="Company D Logo" class="company-logo">
+              <div>
+                <h3>Graphic Designer at Design Hub</h3>
+                <span>2016 - 2018</span>
+              </div>
+            </div>
+            <p>Created compelling visual assets for a wide range of clients across various industries.</p>
+            <ul>
+              <li>Designed brand identities, marketing materials, and social media campaigns.</li>
+              <li>Worked on projects for notable clients including Nike, Spotify, and Airbnb.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">About Me</h2>
+          <p>I'm Dalton Bauer, a passionate designer focused on creating impactful visual experiences at the intersection of technology and art. My approach combines strategic thinking with creative execution to deliver designs that resonate with audiences and achieve business objectives.</p>
+          <p>With expertise in brand identity, digital design, and print media, I bring a versatile skill set to every project. I believe in the power of thoughtful design to transform ideas into memorable visual stories.</p>
+        </div>
+        <div class="skills">
+            <h3>Core Skills</h3>
+            <ul class="skills-list">
+                <li>UI/UX Design</li>
+                <li>Brand Identity</li>
+                <li>Design Systems</li>
+                <li>Prototyping</li>
+                <li>Motion Graphics</li>
+                <li>Art Direction</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Let's Connect</h2>
+      <p>Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+      <a href="mailto:hello@daltonbauer.com" class="contact-button">hello@daltonbauer.com</a>
+      <div class="social-links">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">Behance</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; <span id="current-year"></span> Dalton Bauer. All rights reserved.</p>
   </footer>
 
-  <!-- Make sure this path is correct -->
   <script src="./script.js"></script>
 </body>
 </html>
